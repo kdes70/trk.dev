@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+
+    Options +FollowSymLinks
+    RewriteEngine on
+
+#TURN ON VIEW SUBDIRS AS ROOTDIRS (включаем просмотр поддиректорий как главных директорий)
+RewriteRule  ^(images|downloaded|documents|media|other+)/(.*)$ /tmce4/uploads/$1/$2 [L]
+RewriteCond %{REQUEST_URI} !^/favicon.ico 
+    # Send request via index.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+
+</IfModule>

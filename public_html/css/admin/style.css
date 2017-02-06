@@ -1,0 +1,354 @@
+/* = Сброс отступов для всех элементов */
+* { margin: 0; padding: 0 }
+
+/* = Убираем маркировку списков */
+ul, ol { list-style: none }
+
+/* = Работаем с таблицами: убираем удвоение рамок ячеек и расстояние между ячейками */
+table { border-collapse: collapse; border-spacing: 0 }
+
+/* = Ссылки */
+a { text-decoration: none;}
+
+p{line-height: 1.5;}
+
+/* = Убираем рамку для изображений */
+img { border: none; height: auto; max-width: 100%; }
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+hr{
+    margin: 10px auto;
+}
+
+label{vertical-align: middle;}
+
+*{
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+
+html{
+    font-family: Arial, Verdana, Helvetica, Geneva, sans-serif !important;
+    -webkit-font-smoothing:antialiased; 
+    text-rendering: optimizeSpeed;
+}
+
+
+body{
+    color: #3E4156;
+/*  font-weight: 600;
+text-align: center;
+line-height: normal; */
+    background: url('../../img/bg_head.jpg') no-repeat top center fixed;
+    background-size: 100% 390px;
+    padding: 40px;
+    
+    /*-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;*/
+    
+
+}
+
+/* = Убираем обводку при клике на элементы форм и др. */
+:focus { outline: 0 }
+
+/* = Сбрасываем выравнивание после плавающих элементов */
+.clear { clear: both; height: 1px; margin-top: -1px }
+
+/* -------- ОСНОВНАЯ РАЗМЕТКА -------- */
+
+.right{
+    float: right;
+}
+#wrepper{
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 3px solid #fff;
+    padding: 20px;
+    background: url('../../img/admin/opasity_bg.png');
+}
+header{
+    height: 80px;
+    color: #fff;
+}
+nav{
+    height: 40px;
+    margin: 20px;
+}
+nav > ul > li{
+    display: inline-block;
+    margin-left: 20px;
+}
+nav > ul > li a{
+    font-size: 20px;
+    color: #fff;
+}
+nav > ul > li a:hover{
+    text-decoration: underline;
+}
+section#content{
+    margin-top: 60px;
+}
+
+aside{
+    width: 250px;
+    min-height: 300px;
+    float: left;
+    padding: 20px;
+    border-radius: 10px;
+    background: url('../../img/admin/opasity_bg_fff.png');
+}
+#left ul li{
+    padding: 10px;
+}
+#left ul li:hover{
+    background: url('../../img/admin/opasity_bg_fff.png');
+}
+section#page{
+    min-height: 300px;
+    margin-left: 270px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+#table_page table{
+    border: 1px solid;
+    width: 90%;
+    margin: 20px auto;
+}
+table td{
+    padding: 10px;
+}
+#table_page table tr:nth-child(even){
+    background: #eee;
+}
+#table_page table tbody tr:hover{
+    background: #ccc;
+}
+thead {
+    border: 1px solid;
+}
+
+/** PAGE FORM */
+#page_form form > div{
+    padding: 10px 0;
+}
+
+#page_form form input[type='text'],
+#page_form form select{
+    height: 30px;
+    width: 250px;
+    padding: 3px;
+    font-size: 16px;
+    font-weight: 600;
+}
+input.save_input{
+    display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #018dc4;
+  -webkit-border-radius: 9px;
+  border-radius: 9px;
+ /* font: normal 16px/normal "Times New Roman", Times, serif;*/
+  color: rgba(255,255,255,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, rgba(81,184,41,1) 0, rgba(81,184,41,1) 25%, rgba(21,134,0,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(81,184,41,1) 0, rgba(81,184,41,1) 25%, rgba(21,134,0,1) 100%);
+  background: linear-gradient(180deg, rgba(81,184,41,1) 0, rgba(81,184,41,1) 25%, rgba(21,134,0,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+input.save_input:hover{
+    background: -webkit-linear-gradient(-90deg, rgba(58,147,23,1) 0, rgba(61,204,32,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(58,147,23,1) 0, rgba(61,204,32,1) 100%);
+  background: linear-gradient(180deg, rgba(58,147,23,1) 0, rgba(61,204,32,1) 100%);
+  background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+}
+
+input.save_input:active{
+background: -webkit-linear-gradient(left, rgba(81,184,41,1) 0%, rgba(21,134,0,1) 100%);
+background: -o-linear-gradient(left, rgba(81,184,41,1) 0%, rgba(21,134,0,1) 100%);
+background: linear-gradient(to right, rgba(81,184,41,1) 0%, rgba(21,134,0,1) 100%);
+background-position: 50% 50%;
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.2) inset;
+  box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.2) inset;
+}
+
+
+        .placeholder {
+            outline: 1px dashed #4183C4;
+            /*-webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            margin: -1px;*/
+        }
+
+        .mjs-nestedSortable-error {
+            background: #fbe3e4;
+            border-color: transparent;
+        }
+
+        ol {
+            margin: 0;
+            padding: 0;
+            padding-left: 30px;
+        }
+
+        ol.sortable, ol.sortable ol {
+            margin: 0 0 0 25px;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        ol.sortable {
+            margin: 4em 0;
+        }
+
+        .sortable li {
+            margin: 5px 0 0 0;
+            padding: 0;
+        }
+
+        .sortable li div  {
+            border: 1px solid #d4d4d4;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            border-color: #D4D4D4 #D4D4D4 #BCBCBC;
+            padding: 6px;
+            margin: 0;
+            cursor: move;
+            background: #f6f6f6;
+            background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed));
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 );
+        }
+
+        .sortable li.mjs-nestedSortable-branch div {
+            background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #f0ece9 100%);
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#f0ece9 100%);
+
+        }
+
+        .sortable li.mjs-nestedSortable-leaf div {
+            background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #bcccbc 100%);
+            background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#bcccbc 100%);
+
+        }
+
+        li.mjs-nestedSortable-collapsed.mjs-nestedSortable-hovering div {
+            border-color: #999;
+            background: #fafafa;
+        }
+
+        .disclose {
+            cursor: pointer;
+            width: 10px;
+            display: none;
+        }
+
+        .sortable li.mjs-nestedSortable-collapsed > ol {
+            display: none;
+        }
+
+        .sortable li.mjs-nestedSortable-branch > div > .disclose {
+            display: inline-block;
+        }
+
+        .sortable li.mjs-nestedSortable-collapsed > div > .disclose > span:before {
+            content: '+ ';
+        }
+
+        .sortable li.mjs-nestedSortable-expanded > div > .disclose > span:before {
+            content: '- ';
+        }
+
+/*seting_pahel*/
+#seting_pahel{
+    height: 40px;
+}
+#seting_pahel p{
+    padding: 5px;
+}
+#seting_pahel a{
+    text-align: center;
+    margin-left: 20px;
+    padding: 7px;
+    border-radius: 10px;
+    display: inline-block;
+    background: #ccc;
+}
+/*GUEST*/
+.guest_item{
+    margin: 10px auto;
+}
+.guest_item p{
+    padding: 10px;
+}
+.guest_item a {
+    display: inline-block;
+        margin-left: 10px;
+    
+}
+
+/*PAGINATION*/
+.pagination{
+    height: 40px;
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+
+}
+.pagination ul li{
+    width: 35px;
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    margin-left: 20px;
+    border-radius: 50%;
+
+}
+.pagination ul li a{
+    display: block;
+}

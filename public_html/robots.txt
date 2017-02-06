@@ -1,0 +1,19 @@
+user-agent: *
+Disallow: /cgi-bin/
+Disallow: /admin
+Disallow: /rooms/read/
+Disallow: /ckeditor/
+Disallow: /component/
+Disallow: /controllers/
+Disallow: /language/
+Disallow: /libs/
+Disallow: /log/
+Disallow: /models/
+Disallow: /photo/
+Disallow: /setup/
+Disallow: /skins/js/
+Disallow: /skins/css/
+Disallow: /skins/images/
+
+
+Sitemap: http://kovcheg-inn.ru/sitemap.xml
